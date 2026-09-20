@@ -1154,31 +1154,49 @@ footer {
   padding: 0 clamp(24px, 7.5vw, 112px);
 
   display: flex;
-
   align-items: center;
 
   gap: 30px;
 
   justify-content: space-between;
 
-  color: #65706a;
+  color: rgba(255, 255, 255, 0.65);
 
   font-size: 12px;
+
+  /* Same theme as Hero */
+  background:
+    radial-gradient(
+      circle at 72% 30%,
+      rgba(18, 200, 232, 0.35),
+      transparent 24%
+    ),
+    linear-gradient(
+      125deg,
+      #02080b 0%,
+      #071a22 34%,
+      #0a3949 70%,
+      #087c9a 120%
+    );
+
+  position: relative;
+  overflow: hidden;
 }
 
-footer .brand {
-  color: var(--ink);
 
+footer .brand {
+  color: #fff;
   font-size: 20px;
 }
 
 footer .brand-logo {
-  width: 34px;
-  height: 25px;
+  width: 55px;
+  height: 55px;
 }
 
 footer p {
   margin: 0 auto 0 0;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* =========================================
@@ -1323,6 +1341,7 @@ footer p {
     padding-block: 24px;
 
     gap: 13px 22px;
+
   }
 
   footer p {
@@ -1462,4 +1481,27 @@ footer p {
   .hero-sticker {
     right: 18px;
   }
+}
+
+.intro-page {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  background: #000;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
