@@ -182,7 +182,7 @@ export default function Home() {
           />
 
           <span className="brand-name">
-            WEBWHALE<span className="brand-dot">.</span>
+            WEBXWHALE<span className="brand-dot">.</span>
           </span>
         </a>
 
@@ -202,19 +202,19 @@ export default function Home() {
             Home
           </a>
 
-          <a href="#services" onClick={closeMenu}>
+          <a href="/services" onClick={closeMenu}>
             Services
           </a>
 
-          <a href="#products" onClick={closeMenu}>
+          <a href="/products" onClick={closeMenu}>
             Products
           </a>
 
-          <a href="#about" onClick={closeMenu}>
+          <a href="/aboutus" onClick={closeMenu}>
             About us
           </a>
 
-          <a className="nav-cta" href="#contact" onClick={closeMenu}>
+          <a className="nav-cta" href="/contact" onClick={closeMenu}>
             Contact <ArrowUpRight />
           </a>
         </div>
@@ -228,7 +228,7 @@ export default function Home() {
 
         <div className="hero-content">
           <p className="kicker">
-            <span></span>
+            {/* <span></span> */}
             Built for what&apos;s next
           </p>
 
@@ -309,8 +309,8 @@ export default function Home() {
                 group.title === "Products"
                   ? "products"
                   : group.title === "Services"
-                  ? "services"
-                  : undefined
+                    ? "services"
+                    : undefined
               }
               key={group.title}
             >
@@ -415,7 +415,7 @@ export default function Home() {
 
       {/* ================= ABOUT ================= */}
       <section className="about section" id="about">
-        <p className="eyebrow">ABOUT WEBWHALE</p>
+        <p className="eyebrow">ABOUT WEBWXHALE</p>
 
         <div className="about-layout">
           <h2>
@@ -426,7 +426,7 @@ export default function Home() {
 
           <div>
             <p>
-              WEBWHALE is a multipurpose platform for people who want to turn
+              WEBXWHALE is a multipurpose platform for people who want to turn
               an early spark into meaningful progress. Learn the skills, use
               the tools and find the support to keep building.
             </p>
@@ -471,22 +471,127 @@ export default function Home() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer>
-        <a className="brand footer-brand" href="#home">
-          <img
-            className="brand-logo"
-            src="/webwhale_logo.png"
-            alt="WEBWHALE"
-          />
 
-          <span className="brand-name">
-            WEBWHALE<span className="brand-dot">.</span>
-          </span>
-        </a>
+      <footer className="site-footer">
+        <div className="footer-top">
+          {/* Brand */}
+          <div className="footer-brand-column">
+            <a className="brand footer-brand" href="#home">
+              <img
+                className="brand-logo"
+                src="/webwhale_logo.png"
+                alt="WEBWHALE"
+              />
 
-        <p>Learning, tools and support for forward thinkers.</p>
+              <span className="brand-name">
+                WEBWHALE<span className="brand-dot">.</span>
+              </span>
+            </a>
 
-        <span>© {new Date().getFullYear()} WEBWHALE</span>
+            <p className="footer-description">
+              Learning, tools and technology for people and businesses
+              ready to move forward.
+            </p>
+
+            <a
+              className="footer-email"
+              href="mailto:hello@webwhale.in"
+            >
+              hello@webwhale.in
+              <ArrowUpRight />
+            </a>
+          </div>
+
+          {/* Products */}
+          <div className="footer-column">
+            <p className="footer-heading">PRODUCTS</p>
+
+            <nav className="footer-links">
+              <a href="/products">
+                SQLwhale
+              </a>
+
+              <a href="/products">
+                Resume Analyzer
+              </a>
+
+              <a href="/products">
+                AI 8D Audio Converter
+              </a>
+
+              <a href="/products">
+                More Products
+              </a>
+            </nav>
+          </div>
+
+          {/* Services */}
+          <div className="footer-column">
+            <p className="footer-heading">SERVICES</p>
+
+            <nav className="footer-links">
+              <a href="/services">
+                Web Development
+              </a>
+
+              <a href="/services">
+                Marketing
+              </a>
+
+              <a href="/services">
+                Consulting
+              </a>
+
+              <a href="/contact">
+                Work with us
+              </a>
+            </nav>
+          </div>
+
+          {/* Company / Legal */}
+          <div className="footer-column">
+            <p className="footer-heading">COMPANY</p>
+
+            <nav className="footer-links">
+              <a href="/aboutus">
+                About us
+              </a>
+
+              <a href="/terms">
+                Terms & Conditions
+              </a>
+
+              <a href="/privacy">
+                Privacy Policy
+              </a>
+
+              <a href="/contact">
+                Contact
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        {/* Footer bottom */}
+        <div className="footer-bottom">
+          <div className="footer-copyright">
+            © {new Date().getFullYear()} WEBWHALE. All rights reserved.
+          </div>
+
+          <div className="footer-bottom-links">
+            <a href="/terms">
+              Terms
+            </a>
+
+            <a href="/privacy">
+              Privacy
+            </a>
+
+            <a href="/home">
+              Back to top ↑
+            </a>
+          </div>
+        </div>
       </footer>
     </main>
   );
